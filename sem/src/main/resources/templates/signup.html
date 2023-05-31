@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<link rel="stylesheet" th:href="@{/style/bootstrap.css}">
+<link rel="stylesheet" th:href="@{/style/fonts-awesome.min.css}">
+<link rel="stylesheet" th:href="@{/style/main.css}">
+<head>
+    <meta charset="UTF-8">
+    <title>Регистрация</title>
+</head>
+<body>
+<h2>Регистрация</h2>
+<form th:action="@{/signUp}" th:object="${signupForm}" method="post">
+    <div class="form-group">
+        <label class="control-label col-sm-3" for="username">E-mail</label>
+        <div class="controls col-sm-9">
+            <input id="username" name="username" class="form-control" type="text" th:field="*{login}" required/>
+        </div>
+    </div><div class="form-group">
+    <label class="control-label col-sm-3" for="password">Password</label>
+    <div class="controls col-sm-9">
+        <input id="password" name="password" class="form-control" type="password" th:field="*{password}" required/>
+    </div>
+<!--</div><div class="form-group">-->
+<!--    <label class="control-label col-sm-3" for="password">Password again</label>-->
+<!--    <div class="controls col-sm-9">-->
+<!--        <input id="password2" name="password2" class="form-control" type="password" value=""/>-->
+<!--    </div>-->
+</div><button type="submit" class="buttons">Sign up</button>
+</form>
+</body>
+</html>
+
+
+
+

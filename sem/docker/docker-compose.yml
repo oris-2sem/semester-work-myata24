@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  jewerly-bd-test:
+    container_name: jewerly_bd_test
+    image: postgres:13
+    ports:
+      - 6666:5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 1k7Gj5Pp
+      POSTGRES_DB: jewerly_bd_test
+
+  sem-service:
+    container_name: sem
+    ports:
+      - 9998:8080
+    environment:
+      DB_HOST: jewerly_bd_test
+      DB_PORT: 5432
+    build:
+      context: ../
+      dockerfile: Dockerfile
