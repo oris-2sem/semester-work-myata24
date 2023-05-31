@@ -18,7 +18,7 @@ spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/jewerly-db-sem
     username: postgres
-    password: 1k7Gj5Pp
+    password: password
   database:
     driverClassName: org.postgresql.Driver
   thymeleaf:
